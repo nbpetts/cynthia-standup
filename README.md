@@ -1,10 +1,9 @@
 
-# Ruby on Rails Tutorial sample application
+# Cynthia Shur Petts: Comedian
 
-This is the sample application for
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
-by [Michael Hartl](http://www.michaelhartl.com/).
+This site was designed by
+[*Nathan Petts*](http://www.nathanpetts.com/)
+
 
 ## Getting started
 
@@ -32,5 +31,5 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails server
 ```
 
-For more information, see the
+Some code based on:
 [*Ruby on Rails Tutorial* book](http://www.railstutorial.org/book).
