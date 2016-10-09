@@ -1,0 +1,77 @@
+    // color variables
+$beard: #bc5f04;
+$tieBlue: #5782b7;
+$darkBlue: #28466a;
+$lightBlue: #93c3ff;
+$darkBrown: #6a4f1d;
+$lightBrown: #b79557;
+$myWhite: #f9f9f9;
+$myH1: #191919;
+$myH2: #424242;
+$myButtonShadow: #7b7263;
+$myDarkGrey: #191919;
+$myLightGrey: #424242;
+$myLightGreen: #C1C952;
+$myDarkGreen: #598527;
+$myLighterGreen: #e4e4ad;
+$link-color:           $tieBlue !default;
+$font-family-sans-serif:  "Lato", "Trebuchet MS", Arial, sans-serif !default;
+$font-family-serif:     "Life Savers", Georgia, Times, serif !default;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-size-base:          16px !default;
+$font-size-h2:            floor(($font-size-base * 1.5)) !default; // ~30px
+$headings-font-family:    $font-family-sans-serif !default;
+$headings-color:          $myDarkGrey !default;
+//$icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "/assets/fonts/bootstrap/") !default;
+//$navbar-default-bg:                $lightBrown !default;
+$navbar-default-link-color:                $myH1 !default;
+$navbar-default-link-hover-color:          lighten($myH1, 25%) !default;
+$navbar-default-link-hover-bg:             darken($lightBrown, 5%) !default;  
+$navbar-default-brand-color:               $myH1 !default;
+$navbar-default-brand-hover-color:         darken($myH1, 10%) !default;
+$navbar-default-toggle-hover-bg:            $darkBrown !default;
+
+
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  2: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  3: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+) !default;
+$border-width: 1px !default;
+
+$border-radius:          0 !default;
+$border-radius-lg:       0 !default;
+$border-radius-sm:       0 !default;
+
+$navbar-border-radius:              $border-radius !default;
+$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-brand-padding-y:            .25rem !default;
+
+$navbar-dark-color:                 rgba(255,255,255,.5) !default;
+$navbar-dark-hover-color:           rgba(255,255,255,.75) !default;
+$navbar-dark-active-color:          rgba(255,255,255,1) !default;
+$navbar-dark-disabled-color:        rgba(255,255,255,.25) !default;
+$navbar-dark-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !default;
+
+$navbar-light-color:                rgba(0,0,0,.3) !default;
+$navbar-light-hover-color:          rgba(0,0,0,.6) !default;
+$navbar-light-active-color:         rgba(0,0,0,.8) !default;
+$navbar-light-disabled-color:       rgba(0,0,0,.15) !default;
+$navbar-light-toggler-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !default;

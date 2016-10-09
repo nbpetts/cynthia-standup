@@ -1,0 +1,8 @@
+<div class="shows">
+  <% if @shows.any? %>
+    <h2>Upcoming Shows</h2>
+    <ol class="show_list">
+      <%= render @shows %>
+    </ol>
+  <% end %>
+</div>

@@ -1,7 +1,21 @@
+@import "bootstrap_overrides";
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* mixins, variables, etc. */
+
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
 
 $gray-medium-light: #eaeaea;
 
@@ -31,50 +45,50 @@ textarea {
     margin-bottom: 10px;
   }
 }
+/* hero */
 
-/* typography */
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
+h1.hero{
+  
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
+
+h1.hero span {
+  font: 1.5em Monaco, MonoSpace;
   text-align: center;
+  height: 300px;
+  position: absolute;
+  width: 20px;
+  left: 50%;
+  top: 10px;
+  transform-origin: bottom center;
 }
 
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $gray-light;
-}
+@for $i from 1 through 18 {
+  
 
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
-
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
+  .char#{ $i } {
+    @include transform(rotate((-57+$i*6)+deg))
   }
+    
+  
+  
+}
+
+
+  
+img.heroImage {
+
+  margin: 0 auto;
+  max-width: 200px;
+}
+/* header */
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar {
+    text-align: center;
 }
 
 /* footer */
@@ -145,61 +159,3 @@ input {
   margin-left: 0;
 }
 
-/* sidebar */
-
-aside {
-  section.user_info {
-    margin-top: 20px;
-  }
-  section {
-    padding: 10px 0;
-    margin-top: 20px;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.4em;
-      text-align: left;
-      letter-spacing: -1px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-  }
-}
-
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
-
-.gravatar_edit {
-  margin-top: 15px;
-}
-
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}

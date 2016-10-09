@@ -1,0 +1,26 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  venue: MyString
+  date: <%= 10.days.from_now %>
+  show_type: "Standup"
+  url: MyString
+
+two:
+  venue: MyString
+  date: <%= 5.days.from_now %>
+  show_type: "Storytelling"
+  url: MyString
+
+three:
+  venue: MyString
+  date: <%= 2.days.from_now %>
+  show_type: "Storytelling"
+  url: MyString
+
+
+most_recent:
+  venue: MyString
+  date: <%= 1.days.from_now %>
+  show_type: "Storytelling"
+  url: MyString

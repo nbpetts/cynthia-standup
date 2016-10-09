@@ -13,6 +13,9 @@ gem 'bcrypt',         '3.1.11'
 gem 'faker',          '1.6.3'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
+gem 'rack-lettering', '~> 0.1.1'
+gem 'validates_timeliness', '~> 4.0'
+
 
 
 group :development, :test do
