@@ -1,5 +1,5 @@
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
+User.create!(name:  "Nathan Petts",
+             email: "nbpetts@fenchurch.com",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: true,
@@ -27,7 +27,16 @@ show_types = ["Standup", "Storytelling", "Improv"]
 10.times do 
 
   Show.create!(venue: venues.sample,
-               date: Faker::Date.forward(90),
+               date: Faker::Time.forward(90, :evening),
+               show_type: show_types.sample,
+               url: Faker::Internet.url 
+               )
+end
+
+10.times do 
+
+  Show.create!(venue: venues.sample,
+               date: Faker::Time.backward(90, :evening),
                show_type: show_types.sample,
                url: Faker::Internet.url 
                )

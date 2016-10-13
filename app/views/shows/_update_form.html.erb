@@ -1,0 +1,23 @@
+
+<h1>Update <%= @show.venue %></h1>
+
+
+<%= form_for(@show, remote: true) do |f|  %>
+<%= render 'shared/error_messages', object: f.object  %>
+
+<div class="field">
+  <%= f.text_field :venue, placeholder: "Venue..." %>
+</div>
+<div class="field">
+  <%= f.datetime_field :date %>
+</div>
+<div class="field">
+  <%= f.text_field :show_type, placeholder: "Show Type..." %>
+</div>
+<div class="field">
+  <%= f.url_field :url, placeholder: "Venue URL..." %>
+</div>
+<%= f.submit "Update the show", class: "btn btn-primary" %>
+<% end %>
+
+

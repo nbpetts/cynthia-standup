@@ -30,6 +30,10 @@ module SessionsHelper
     !current_user.nil?
   end
 
+  def admin?
+    current_user.admin == true
+  end
+
   # Forgets a persistent session.
   def forget(user)
     user.forget
@@ -48,6 +52,9 @@ module SessionsHelper
     user == current_user
   end
 
+  def admin_user? (user)
+    user.admin == true
+  end
 
   def redirect_back_or(default)
     redirect_to(session[:forwarding_url] || default)

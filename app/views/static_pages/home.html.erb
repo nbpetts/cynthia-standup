@@ -1,3 +1,9 @@
 <% provide(:title, "Home") %>
-
-
+<div class="shows">
+  <% if @shows_upcoming.any? %>
+    <h2>Upcoming Shows</h2>
+    <ol class="show_list">
+      <%= render @shows_upcoming %>
+    </ol>
+  <% end %>
+</div>

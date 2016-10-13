@@ -1,8 +1,40 @@
-<div class="shows">
-  <% if @shows.any? %>
-    <h2>Upcoming Shows</h2>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#upcoming">Upcoming Shows<!-- </h1> --></a></li>
+  <li><a data-toggle="tab" href="#past"><!-- <h1> -->Past Shows<!-- </h1> --></a></li>
+  
+
+</ul>
+<% if admin? %>
+  <%= link_to new_show_path do %>
+    <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>Aadd show"
+  <% end %>
+
+<% end %>
+<div class="tab-content">
+  <div id="upcoming" class="tab-pane fade in active">
+
+   <div class="shows">
+    <% if @shows_upcoming.any? %>
+
     <ol class="show_list">
-      <%= render @shows %>
+      <%= render @shows_upcoming %>
     </ol>
+    <% end %>
+  </div>
+
+
+</div>
+<div id="past" class="tab-pane fade">
+
+ <div class="shows">
+  <% if @shows_past.any? %>
+
+  <ol class="show_list">
+    <%= render @shows_past %>
+  </ol>
   <% end %>
 </div>
+
+</div>
+

@@ -5,6 +5,14 @@ class Show < ApplicationRecord
   validates :date, presence: true
   validates_datetime :date
   
+# def count_after_today
+#   Show.find_each do |show|
+#     if show.date >= DateTime.now()
+#       return show
+#     end 
+# end
+
+
 
 
 end

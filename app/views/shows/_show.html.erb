@@ -1,7 +1,21 @@
 <li class="show show-<%= show.id %>">
   <h2 class="venue"><%= link_to show.venue, show.url, target:"_blank", class: "venueLink" %></h2>
-  <p class="date"><%= show.date.strftime("%B %d, %Y") %></p>
-  <p>I'll be doing <%= show.show_type %></p>
+  <p class="date"><%= show.date.strftime("%B %d, %Y - %l %p") %></p>
+  <% if show.date < DateTime.now() %>
+    <p>I did some <%= show.show_type %></p>
+
+    <% else %>
+
+    <p>I'll be doing <%= show.show_type %></p>
+  <% end %>
+  
+  <% if admin? %>
+    <%= link_to "edit", edit_show_path(show)  %>
+    <%= link_to "delete", show, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+
+  <% end %>
+  
 
 </li>
   

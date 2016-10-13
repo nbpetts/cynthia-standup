@@ -31,5 +31,6 @@ class ShowTest < ActiveSupport::TestCase
     assert_equal shows(:most_recent), Show.first
   end
 
+   
 
 end
