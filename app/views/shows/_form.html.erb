@@ -1,5 +1,3 @@
-<h1>Add a new show</h1>
-
 <%= form_for(@show, remote: true) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
 <div class="field">
@@ -14,5 +12,5 @@
 <div class="field">
   <%= f.url_field :url, placeholder: "Venue URL..." %>
 </div>
-<%= f.submit "Book it!", class: "btn btn-primary" %>
+<%= f.submit @show.new_record? ? "Book it!" : "Update this show", class: "btn btn-primary" %>
 <% end %>

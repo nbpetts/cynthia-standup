@@ -1,4 +1,9 @@
 <% provide(:title, "Home") %>
+<div class="booking">
+  
+
+</div>
+
 <div class="shows">
   <% if @shows_upcoming.any? %>
     <h2>Upcoming Shows</h2>
@@ -6,4 +11,13 @@
       <%= render @shows_upcoming %>
     </ol>
   <% end %>
+</div>
+
+<div class="videos frontPageVideo">
+  <% if @video %>
+    <h2>Videos of me!</h2>
+    <%= render @video %>
+  <% end %>
+
+
 </div>

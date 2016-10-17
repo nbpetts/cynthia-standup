@@ -1,0 +1,22 @@
+<% provide(:title, 'Videos') %>
+<h1>Videos</h1>
+<% if admin? %>
+<%= link_to new_video_path do %>
+<span class='glyphicon glyphicon-plus' aria-hidden='true'></span>Add video
+<% end %>
+
+<% end %>
+
+
+<div class="videos">
+  <% if @videos.any? %>
+
+  <ol class="show_list">
+    <%= render @videos %>
+  </ol>
+  <% end %>
+</div>
+
+
+
+

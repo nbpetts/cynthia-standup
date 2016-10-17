@@ -7,13 +7,13 @@ class ShowInterfaceTest < ActionDispatch::IntegrationTest
     @show = shows(:one)
   end
 
-  test "micropost interface" do
+  test "show interface" do
     log_in_as(@user)
-    get root_path
+    get root_url
     assert_select 'div.shows'
     # Invalid submission
     assert_no_difference 'Show.count' do
-      post shows_path, params: { show: { venue: "" } }
+      post shows_path, params: { show: { venue: "    " , date: DateTime.now(), show_type: "Standup", url: "http://www.google.com" } }
     end
     assert_select 'div#error_explanation'
     # Valid submission

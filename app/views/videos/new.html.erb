@@ -1,5 +1,7 @@
+<% provide(:title, "Post a video") %>
+
 <% if logged_in? %>
-  <h1>Add a new show</h1>
+
   <%= render 'form' %>
 
 
@@ -7,4 +9,3 @@
   <h1>Hi!</h1>
   <p>Please log in</p>
 <% end %>
-

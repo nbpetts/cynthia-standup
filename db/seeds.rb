@@ -41,3 +41,13 @@ end
                url: Faker::Internet.url 
                )
 end
+
+videos = ["https://www.youtube.com/embed/J---aiyznGQ", "https://www.youtube.com/embed/dQw4w9WgXcQ","https://www.youtube.com/embed/d9TpRfDdyU0" ]
+
+Video.create!(title: "Me at the Uptown Underground", url: "https://www.youtube.com/embed/tosBWPSieyU", front_page: true) 
+
+4.times do 
+
+  Video.create!(title: venues.sample, url: videos.sample, front_page: false) 
+
+end

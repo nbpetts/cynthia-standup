@@ -1,8 +1,8 @@
 <% provide(:title, "Edit Show") %>
 
 <% if logged_in? %>
-
-  <%= render 'update_form' %>
+  <h1>Update <%= @show.venue %></h1>
+  <%= render 'form' %>
 
 
 <% else %>

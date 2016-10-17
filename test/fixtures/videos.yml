@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  url: MyString
+  front_page: true
+
+two:
+  title: MyString
+  url: MyString
+  front_page: false
+
+three:
+  title: MyString
+  url: MyString
+  front_page: false
+
+four:
+  title: MyString
+  url: MyString
+  front_page: false

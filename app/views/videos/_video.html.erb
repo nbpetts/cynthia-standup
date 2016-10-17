@@ -1,0 +1,10 @@
+<div class="video <%= video.id.even? ? "videoRight" : "videoLeft" %> ">
+  <div class=""><h3><%= video.title %></h3>
+    <iframe width="560" height="315" src="<%= video.url %>" frameborder="0" allowfullscreen></iframe></div>
+  <% if admin? %>
+  <%= link_to "edit", edit_video_path(video)  %>
+  <%= link_to "delete", video, method: :delete,
+  data: { confirm: "You sure?" } %>
+
+  <% end %>
+</div>

@@ -17,7 +17,7 @@ class ShowsController < ApplicationController
   def create
     @show = Show.create(show_params)
     if @show.save
-      flash[:success] = "Show date posted."
+      flash[:success] = "Show posted."
       redirect_to shows_url
     else
       render 'new'
@@ -42,7 +42,7 @@ class ShowsController < ApplicationController
   def destroy
     Show.find(params[:id]).destroy
     flash[:success] = "Show deleted"
-    redirect_to request.referrer || root_url
+    redirect_back(fallback_location: root_url)
   end
 
 
