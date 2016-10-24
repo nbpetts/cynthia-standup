@@ -25,4 +25,20 @@ class UserMailerTest < ActionMailer::TestCase
     assert_match CGI.escape(user.email),  mail.body.encoded
   end
 
+  test "booking_email" do
+ 
+    data = {name: "Bob Booker", email: "bob@bob.com", url: "http://www.bob.com", about: Faker::Lorem.paragraph, where: Faker::Lorem.paragraph}
+    mail = UserMailer.booking_email(data)
+
+    assert_equal "Someone wants to book you", mail.subject
+    assert_equal ["nbpetts@gmail.com"], mail.to
+    assert_equal ["noreply@example.com"], mail.from
+    assert_match data[:email],        mail.body.encoded
+    assert_match data[:name],        mail.body.encoded
+    assert_match data[:url],        mail.body.encoded
+   
+
+
+  end
+
 end

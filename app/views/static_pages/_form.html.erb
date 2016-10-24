@@ -1,0 +1,37 @@
+<%= form_tag(email_messages_path, action: :create) do  %>
+
+<div class="field">
+  <%= label_tag :name, "Your name..." %>
+  <%= text_field_tag :name, nil, placeholder: "Roger Agentman", required: true %>
+</div>
+<div class="field">
+  <%= label_tag :email, "Your email..." %>
+  <%= email_field_tag  :email, nil, placeholder: "rog@agentsrus.com", required: true %>
+</div>
+<div class="field">
+  <%= label_tag :about, "What would you like to book me for?" %>
+  <%= text_area_tag  :about, nil, placeholder: "I would like you to do 10 minutes of standup.", required: true %>
+</div>
+<div class="field">
+  <%= label_tag :date, "When would you like to book me?" %>
+  <%= date_field_tag  :date, nil, required: true %>
+</div>
+<div class="field">
+  <%= label_tag :url, "Venue web address if you have one..." %>
+  <%= url_field_tag  :url, nil, placeholder: "www.comedy.com" %>
+</div>
+
+<div class="field">
+  <%= label_tag :where, "If you have seen me before, let me know where..." %>
+  <%= text_area_tag  :where, nil, placeholder: "I once saw you bring down the hosue at the Kates!" %>
+</div>
+
+<div class="field hidden">
+  
+  <%= text_field_tag  :nickname, nil, tabindex: '-1' %>
+   <span class="help">Do not fill in this field. It is an anti-spam measure.</span>
+</div>
+
+
+<%= submit_tag "Send me a message", class: "btn btn-primary" %>
+<% end %>

@@ -21,4 +21,11 @@ class UserMailer < ApplicationMailer
 
     mail to: user.email, subject: "Password reset"
   end
+
+  def booking_email(data)
+    
+    @data = data
+
+    mail to: "nbpetts@gmail.com", subject: "Someone wants to book you"
+  end
 end

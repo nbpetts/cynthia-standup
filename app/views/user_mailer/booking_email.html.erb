@@ -1,0 +1,22 @@
+<h1>Someone wants to book you.</h1>
+
+<p>Hi, <%= @data[:name] %> sent you a messge.</p>
+
+<p>They said:</p>
+
+<p><%= @data[:about] %></p>
+
+<% if @data[:where] %>
+  <p>They may have seen you at:</p>
+  <p><%= @data[:where] %></p>
+<% end %>
+
+<p>Email them back at <%= @data[:email] %></p>
+
+<% if @data[:url] %>
+  <p>Checkout their website: <%= link_to @data[:url], @data[:url], target: "_blank"  %> </p>
+<% end %>
+
+
+
+

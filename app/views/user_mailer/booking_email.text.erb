@@ -1,0 +1,22 @@
+Someone wants to book you.
+
+Hi, <%= @data[:name] %> sent you a messge.
+
+They said:
+
+<%= @data[:about] %>
+
+<% if @data[:where] %>
+They may have seen you at:
+<%= @data[:where] %>
+<% end %>
+
+Email them back at <%= @data[:email] %>
+
+<% if @data[:url] %>
+Checkout their website: <%= @data[:url] %>
+<% end %>
+
+
+
+

@@ -1,5 +1,5 @@
 User.create!(name:  "Nathan Petts",
-             email: "nbpetts@fenchurch.com",
+             email: "nbpetts@gmail.com",
              password:              "foobar",
              password_confirmation: "foobar",
              admin: true,

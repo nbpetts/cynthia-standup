@@ -15,4 +15,9 @@ class UserMailerPreview < ActionMailer::Preview
     UserMailer.password_reset(user)
   end
 
+  def booking_email
+    
+    data = {name: "Bob Booker", email: "bob@bob.com", url: "http://www.bob.com", about: Faker::Lorem.paragraph, where: Faker::Lorem.paragraph}
+    UserMailer.booking_email(data)
+  end
 end
