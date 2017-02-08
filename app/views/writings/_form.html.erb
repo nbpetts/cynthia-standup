@@ -1,0 +1,20 @@
+
+<%=  form_for(writing) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <%= f.trix_editor :body %>
+  
+  <%= f.label :front_page, class: "checkbox" %>
+  <%= f.check_box :front_page, class: "checkbox" %>
+  <%= f.label :published, class: "checkbox"%>
+  <%= f.check_box :published, class: "checkbox"  %>
+  
+  <div class="actions">
+    <%= f.submit writing.new_record? ? "Create this doc" : "Save this doc", class: "btn btn-primary"%>
+  </div>
+<% end %>
+

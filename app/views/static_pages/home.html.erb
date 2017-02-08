@@ -14,9 +14,18 @@
 </div>
 
 <div class="videos frontPageVideo">
-  <% if @video %>
+  <% if @video.any? %>
     <h2>Videos of me!</h2>
     <%= render @video %>
+  <% end %>
+
+
+</div>
+
+<div class="videos frontPageWriting">
+  <% if @writing.any? %>
+    
+    <%= render partial: "writings/blurb", collection: @writing, as: :writing %>
   <% end %>
 
 

@@ -1,0 +1,84 @@
+<% provide(:title, 'Writing') %>
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#upcoming">Things I Wrote<!-- </h1> --></a></li>
+
+  <% if admin? %>
+    <li><a data-toggle="tab" href="#past"><!-- <h1> -->Drafts<!-- </h1> --></a></li>
+  <% end %>
+  
+  
+
+</ul>
+<% if admin? %>
+  <%= link_to new_writing_path do %>
+    <span class='glyphicon glyphicon-plus' aria-hidden='true'></span>Write something new
+  <% end %>
+
+<% end %>
+<div class="tab-content">
+  <div id="upcoming" class="tab-pane fade in active">
+
+   <div class="shows">
+  
+    <% if @writings_published.any? %>
+
+    <ol class="show_list">
+      <%= render partial: "blurb", collection: @writings_published, as: :writing %>
+    </ol>
+    <% end %>
+  </div>
+
+
+</div>
+<div id="past" class="tab-pane fade">
+
+ <div class="shows">
+  <% if @writings_draft.any? %>
+
+  <ol class="show_list">
+    <%= render partial: "blurb",collection: @writings_draft, as: :writing %>
+  </ol>
+  <% end %>
+</div>
+
+</div>
+
+
+<!-- ////////// scaffold code ///////////////////// -->
+<% if false %>
+  
+
+<p id="notice"><%= notice %></p>
+
+<h1>Writings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @writings.each do |writing| %>
+      <tr>
+        <td><%= writing.title %></td>
+        <td><%= raw writing.body %></td>
+        <td><%= link_to 'Show', writing %></td>
+        <td><%= link_to 'Edit', edit_writing_path(writing) %></td>
+        <td><%= link_to 'Destroy', writing, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Writing', new_writing_path %>
+
+
+
+  
+<% end %>

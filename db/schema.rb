@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014175130) do
+ActiveRecord::Schema.define(version: 20161027200206) do
 
   create_table "shows", force: :cascade do |t|
     t.string   "venue"
@@ -44,6 +44,15 @@ ActiveRecord::Schema.define(version: 20161014175130) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean  "front_page"
+  end
+
+  create_table "writings", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean  "front_page"
+    t.boolean  "published"
   end
 
 end

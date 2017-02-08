@@ -6,12 +6,15 @@
   <%= render 'layouts/shim' %>
 </head>
 <body>
+<div class="container">
+  
   <% if current_page?(root_path) %>
   <%= render 'layouts/hero' %>
-  <%= render 'layouts/homepage_header' %>
-  <% else %>
-  <%= render 'layouts/header' %>
   <% end %>
+    
+  <%= render 'layouts/header' %>
+
+  
   <div class="container">
     <% flash.each do |message_type, message| %>
     <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
@@ -20,5 +23,8 @@
     <%= render 'layouts/footer' %>
     <div class="debug_dump"><%= debug(params) if Rails.env.development? %></div>
   </div>
+
+</div>
+  
 </body>
 </html>

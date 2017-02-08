@@ -15,6 +15,11 @@ gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'rack-lettering', '~> 0.1.1'
 gem 'validates_timeliness', '~> 4.0'
+gem 'trix', '~> 0.9.0'
+gem 'carrierwave',             '0.11.2'
+gem 'fog',                     '1.38.0'
+
+
 
 
 

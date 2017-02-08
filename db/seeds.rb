@@ -51,3 +51,13 @@ Video.create!(title: "Me at the Uptown Underground", url: "https://www.youtube.c
   Video.create!(title: venues.sample, url: videos.sample, front_page: false) 
 
 end
+
+ Writing.create!(title: Faker::Book.title, body: Faker::Hipster.paragraphs( 1 + rand(4) ), published: true, front_page: true)
+
+5.times do
+  Writing.create!(title: Faker::Book.title, body: Faker::Hipster.paragraphs( 1 + rand(4) ), published: true, front_page: false)
+end
+
+2.times do
+  Writing.create!(title: Faker::Book.title, body: Faker::Hipster.paragraphs( 1 + rand(4) ), published: false, front_page: false)
+end

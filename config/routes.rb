@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :writings
   resources :videos
   get 'password_resets/new'
   get 'password_resets/edit'
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
+  
+
   resources :shows
 
   resources :users

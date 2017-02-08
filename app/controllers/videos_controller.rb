@@ -33,7 +33,7 @@ class VideosController < ApplicationController
     respond_to do |format|
       if @video.save
         flash[:success] = "Video posted."
-        format.html { redirect_to videos_url }
+        format.html { redirect_to videos_path }
         format.json { render :show, status: :created, location: @video }
       else
         format.html { render :new }

@@ -1,7 +1,6 @@
 @import "bootstrap_overrides";
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
 
 /* mixins, variables, etc. */
 
@@ -28,7 +27,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  //padding-top: 60px;
 }
 
 section {
@@ -47,8 +46,16 @@ textarea {
 }
 /* hero */
 
-h1.hero{
+svg > text{
+  fill: #fff; 
   
+}
+
+
+.hero {
+  @extend .col-xs-12;
+  max-height: 70em;
+
 }
 
 
@@ -85,10 +92,26 @@ img.heroImage {
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
+
 }
 
 .navbar {
     text-align: center;
+    
+}
+.navbar a {
+
+  color: #fff;
+}
+.navbar > li > a:hover {
+
+  color: darken(#fff, 20%);
+  background-color: transparent;
+
+}
+.navbar li:hover {
+
+
 }
 
 /* footer */

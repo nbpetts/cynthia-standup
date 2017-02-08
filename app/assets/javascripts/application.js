@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
-//= require turbolinks
 //= require lettering
+//= require trix
 //= require_tree .
+

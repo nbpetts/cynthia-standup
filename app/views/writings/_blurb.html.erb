@@ -1,0 +1,8 @@
+
+<h2 class="title"><%= writing.title %></h2>
+
+<%=
+  truncate(writing.body, :length => 200, separator: ' ', :escape => false) do
+    link_to "Read the rest", writing_path(writing)
+  end
+%>

@@ -1,0 +1,10 @@
+
+
+<%= render @writing %>
+
+
+<% if admin? %>
+  <%= link_to "edit", edit_writing_path(@writing)  %>
+  <%= link_to "delete", @writing, method: :delete,
+  data: { confirm: "You sure?" } %>
+<% end %>

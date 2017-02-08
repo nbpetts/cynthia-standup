@@ -4,7 +4,7 @@ class ShowsController < ApplicationController
   before_action :admin_user, only: [:create, :destroy, :edit, :update]
 
   def index
-    @shows = Show.all
+    #@shows = Show.all
     @shows_upcoming = Show.where("date >= ?", Time.zone.now.beginning_of_day)
     @shows_past = Show.where("date <= ?", Time.zone.now.beginning_of_day)
   end
